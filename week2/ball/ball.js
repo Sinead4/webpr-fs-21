@@ -15,6 +15,9 @@ function start() {
 }
 
 function nextBoard() {
+    //zuerst nach unten fallen lassen, dann nach links rechts, danach nach untern
+    // mit schnellerer Geschwindigkeit
+
     // keep old ball values for the sake of efficient clearing of the old display
 
     // handle ball is hitting the bounds

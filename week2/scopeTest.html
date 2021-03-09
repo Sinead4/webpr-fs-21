@@ -6,9 +6,47 @@
 </head>
 <body>
     <script>
+        //adio Woche 2 2.Stunde
+       // x = 1; // ist im Global Scope
+        var x = 1; // so ists korrekt
+
+        // starts here Code
+        function foo(){
+            x = 2; // x wird angepasst obwohl es ausserhalb definiert wurde
+            // vermeiden mit lokalem scope mit let,var,const
+            var x = 2; // so ists korrekt
+            console.log(x)
+
+            // wenn zuerst console.log(y);
+            //dann var y = 2; dann wird vor console.log automatisch ein var y = undefined definiert
+        }
+        foo();
+
+        //wenn man dann const statt var nimt sind es
+
+        // ends here Code
+
+        //functionen brauchen keinen Namen muss aber ein Ausdruck machen
 
 
+        )
 
+        document.writeln(x === 1);
+
+
+        //Kalkül
+
+        const id                 = x => x;
+        const konstantenFunktion = x => y => x;
+        const kite               = x => y => y;
+        const kite2               = x => y => id(y);
+        const kite3               = x => id; // id ersetzen durch funk die id zurückgibt
+        const kite4               = x => konstantenFunktion(id)(x); // eta
+        const kite5               = x => konstantenFunktion(id);
+
+        document.writeln(id(id) === id); //ist true
+        document.writeln(konstantenFunktion(id)(undefined) === id); // auch true, weil nur erster Wert zurückgegeben wird
+        document.writeln(kiste(undefined)(id) === id); // auch true
 
 
     </script>
