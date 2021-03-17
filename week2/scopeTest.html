@@ -10,12 +10,34 @@
        // x = 1; // ist im Global Scope
         var x = 1; // so ists korrekt
 
+<<<<<<< HEAD
         // starts here Code
         function foo(){
             x = 2; // x wird angepasst obwohl es ausserhalb definiert wurde
             // vermeiden mit lokalem scope mit let,var,const
             var x = 2; // so ists korrekt
             console.log(x)
+=======
+        const x = 1;
+        // starts here
+        ( () => {
+            const x = 2;
+            console.log(x);
+        }) (); // IIFE
+        // ends here
+
+        document.writeln(x === 1);
+
+        const id    = x => x;
+        const konst = x => y => x;
+
+        const kite  = konst(id);
+
+        document.writeln(id(id) === id);
+        document.writeln(konst(id)(undefined) === id);
+        document.writeln(kite(undefined)(id) === id);
+
+>>>>>>> e343d81e67b9394c623b1ba28c03ffbb31a0bfa0
 
             // wenn zuerst console.log(y);
             //dann var y = 2; dann wird vor console.log automatisch ein var y = undefined definiert
